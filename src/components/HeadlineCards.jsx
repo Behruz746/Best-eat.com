@@ -15,7 +15,7 @@ function HeadlineCards() {
             </button>
           </div>
           <img
-            width="100%"
+            width="300px"
             height={160}
             src={imageLink}
             className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl"

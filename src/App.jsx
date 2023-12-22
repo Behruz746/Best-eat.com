@@ -1,4 +1,10 @@
-import { Navbar, Hero, HeadlineCards, Food } from "./components/pathIndex";
+import {
+  Navbar,
+  Hero,
+  HeadlineCards,
+  Food,
+  Category,
+} from "./components/pathIndex";
 
 function App() {
   return (
@@ -7,6 +13,7 @@ function App() {
       <Hero />
       <HeadlineCards />
       <Food />
+      <Category />
     </div>
   );
 }

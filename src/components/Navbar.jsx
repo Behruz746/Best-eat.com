@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AiOutlineMenu,
   AiOutlineSearch,
@@ -12,6 +12,12 @@ import { MdFavorite, MdHelp } from "react-icons/md";
 
 function Navbar() {
   const [nav, setNav] = useState(true);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      setNav(true);
+    });
+  }, [nav]);
 
   return (
     <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
@@ -74,31 +80,31 @@ function Navbar() {
         </h2>
         <nav>
           <ul className="flex flex-col p-4 text-gray-800">
-            <li className="text-xl py-4 flex">
+            <li className="text-xl py-4 flex hover:text-gray-500 duration-200 cursor-pointer">
               <TbTruckDelivery size={25} className="mr-4" />
               Orders
             </li>
-            <li className="text-xl py-4 flex">
+            <li className="text-xl py-4 flex hover:text-gray-500 duration-200 cursor-pointer">
               <MdFavorite size={25} className="mr-4" />
               Favorites
             </li>
-            <li className="text-xl py-4 flex">
+            <li className="text-xl py-4 flex hover:text-gray-500 duration-200 cursor-pointer">
               <FaWallet size={25} className="mr-4" />
               Wallet
             </li>
-            <li className="text-xl py-4 flex">
+            <li className="text-xl py-4 flex hover:text-gray-500 duration-200 cursor-pointer">
               <MdHelp size={25} className="mr-4" />
               Help
             </li>
-            <li className="text-xl py-4 flex">
+            <li className="text-xl py-4 flex hover:text-gray-500 duration-200 cursor-pointer">
               <AiFillTag size={25} className="mr-4" />
               Promotions
             </li>
-            <li className="text-xl py-4 flex">
+            <li className="text-xl py-4 flex hover:text-gray-500 duration-200 cursor-pointer">
               <BsFillSaveFill size={25} className="mr-4" />
               Best Ones
             </li>
-            <li className="text-xl py-4 flex">
+            <li className="text-xl py-4 flex hover:text-gray-500 duration-200 cursor-pointer">
               <FaUserFriends size={25} className="mr-4" />
               Invite Friends
             </li>
